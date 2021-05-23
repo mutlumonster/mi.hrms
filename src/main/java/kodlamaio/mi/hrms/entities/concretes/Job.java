@@ -1,5 +1,10 @@
 package kodlamaio.mi.hrms.entities.concretes;
 
+import jdk.jfr.DataAmount;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +13,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "jobs")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Job {
 
     @Id
@@ -17,29 +25,5 @@ public class Job {
 
     @Column(name = "title")
     private String title;
-
-    public Job() {    }
-
-    public Job(int id, String title) {
-        super();
-        this.id = id;
-        this.title = title;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
 }
